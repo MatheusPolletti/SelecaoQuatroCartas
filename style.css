@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root
+{
+    --fonte-principal: 'Poppins', sans-serif;
+
+    --cor-vermelha: hsl(0, 78%, 62%);
+    --cor-ciano: hsl(180, 62%, 55%);
+    --cor-laranja: hsl(34, 97%, 64%);
+    --cor-azul: hsl(212, 86%, 64%);
+
+    --cor-azul-escuro: hsl(234, 12%, 34%);
+    --cor-azul-cinza: hsl(229, 6%, 66%);
+    --cor-cinza-claro: hsl(0, 0%, 98%);
+}
+
+*
+{
+    margin: 0px;
+
+    background-color: #FFF;
+
+    font-family: var(--fonte-principal);
+}
+
+header
+{
+    margin-top: 8vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#titulo
+{
+    color: var(--cor-azul-escuro);
+
+    font-size: clamp(1.2rem, 1.4rem, 4rem);
+
+    font-weight: 300;
+}
+
+#subtitulo
+{
+    color: var(--cor-azul-escuro);
+
+    font-size: clamp(1.2rem, 1.4rem, 3.5rem);
+
+    font-weight: 600; 
+}
+
+#texto
+{
+    color: var(--cor-azul-cinza);
+
+    font-size: clamp(0.8rem, 0.9rem, 1.8rem);
+
+    margin-bottom: 8vh;
+
+    max-width: 90vw;
+
+    padding-left: 0px;
+
+    text-align: center;
+}
+
+.cartas
+{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4vh;
+}
+
+.cartas h3
+{
+    background-color: var(--cor-cinza-claro);
+
+    color: var(--cor-azul-escuro);  
+}
+
+.cartas p
+{
+    background-color: var(--cor-cinza-claro);
+
+    color: var(--cor-azul-cinza);
+
+    font-size: clamp(0.4rem, 0.8rem, 1.6rem);
+
+    margin-bottom: 4vh;
+}
+
+.cartas h3, p
+{
+    max-width: 90%;
+
+    text-align: left;
+    
+    padding-top: 2vh;
+    padding-left: 1.5rem;
+}
+
+.cartas img
+{
+    background-color: var(--cor-cinza-claro);
+
+    padding-right: 8%;
+
+    padding-bottom: 8%;
+}
+
+.supervisor
+{
+    background-color: var(--cor-cinza-claro);
+
+    width: 90%;
+
+    border-top: 3px solid var(--cor-ciano);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 20px var(--cor-azul-cinza);
+
+    text-align: right;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;    
+}
+
+.teamBuilder
+{
+    background-color: var(--cor-cinza-claro);
+
+    width: 90%;
+
+    border-top: 3px solid var(--cor-vermelha);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 20px var(--cor-azul-cinza);
+
+    text-align: right;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.karma
+{
+    background-color: var(--cor-cinza-claro);
+
+    width: 90%;
+
+    border-top: 3px solid var(--cor-laranja);
+
+    border-radius: 5px;
+
+    box-shadow: 0px 2px 20px var(--cor-azul-cinza);
+
+    text-align: right;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.calculator
+{
+    background-color: var(--cor-cinza-claro);
+
+    width: 90%;
+
+    border-top: 3px solid var(--cor-azul);
+    
+    border-radius: 5px;    
+
+    box-shadow: 0px 2px 20px var(--cor-azul-cinza);
+
+    margin-bottom: 10%;
+
+    text-align: right;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cartas article:hover
+{
+    transform: scale(1.06);
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1440px) 
+{
+    #texto
+    {
+        max-width: 28vw;
+    }
+
+    .cartas
+    {
+        display: grid;
+
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9, 3.4vh);
+
+        row-gap: 6vh;
+        column-gap: 9vw;
+    }
+
+    .supervisor
+    {
+        grid-row-start: 3;
+        grid-row-end: 7;
+
+        grid-column-start: 2;     
+        grid-column-end: 6;  
+
+        height: 100%;
+        width: 95%;
+
+        overflow: hidden;
+    }
+
+    .teamBuilder
+    {
+        grid-row-start: 1;
+        grid-row-end: 5;
+
+        grid-column-start: 5;       
+        grid-column-end: 9; 
+
+        height: 100%;
+        width: 95%;
+
+        overflow: hidden;
+    }
+
+    .karma
+    {
+        grid-row-start: 5;
+        grid-row-end: 9;
+
+        grid-column-start: 5;       
+        grid-column-end: 9;  
+    
+        height: 100%;
+        width: 95%;
+
+        overflow: hidden;
+    }
+
+    .calculator
+    {
+        grid-row-start: 3;
+        grid-row-end: 7;
+
+        grid-column-start: 8;  
+        grid-column-end: 12;   
+        
+        margin-bottom: 0px;
+
+        height: 100%;
+        width: 95%;
+
+        overflow: hidden;
+    }
+}
