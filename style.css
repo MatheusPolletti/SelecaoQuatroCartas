@@ -268,3 +268,94 @@ header
         overflow: hidden;
     }
 }
+
+
+@media (min-width: 2200px)
+{
+    header
+    {
+        margin-top: 4vh;
+    }
+
+    #titulo, #subtitulo
+    {
+        font-size: 34px;
+    }
+
+    #texto
+    {
+        max-width: 20vw;
+    }
+
+    .cartas
+    {
+        display: grid;
+
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(9, 3.4vh);
+    }
+
+    .supervisor
+    {
+        grid-row-start: 2;
+        grid-row-end: 5;
+
+        grid-column-start: 2;     
+        grid-column-end: 6;  
+
+        height: 100%;
+        width: 95%;
+
+        margin-top: 10vh;
+
+        overflow: hidden;
+    }
+
+    .teamBuilder
+    {
+        grid-row-start: 1;
+        grid-row-end: 4;
+
+        grid-column-start: 5;       
+        grid-column-end: 9; 
+
+        height: 100%;
+        width: 95%;
+
+        overflow: hidden;
+    }
+
+    .karma
+    {
+        grid-row-start: 4;
+        grid-row-end: 7;
+
+        grid-column-start: 5;       
+        grid-column-end: 9;  
+    
+        height: 100%;
+        width: 95%;
+
+        margin-top: -4vh;
+        
+        overflow: hidden;
+    }
+
+    .calculator
+    {
+        grid-row-start: 2;
+        grid-row-end: 5;
+
+        grid-column-start: 8;  
+        grid-column-end: 12;   
+        
+        margin-bottom: 0px;
+
+        height: 100%;
+        width: 95%;
+
+        margin-top: 10vh;
+
+        overflow: hidden;
+    }
+}
